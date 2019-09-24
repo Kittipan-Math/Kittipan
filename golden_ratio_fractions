@@ -1,0 +1,19 @@
+import time
+import math
+def oneover(a):
+    return 1+(1/a)
+r = int(input("range from - to +: "))
+for q in range(int(-r), r+1):
+    if (q == -1 or q == 0):
+        print(q," : Can't divide by 0")
+    else :
+        d = q
+        phi = (1 + math.sqrt(5)) / 2
+        while True:
+            d = oneover(d)
+            print(q, " : ", d)
+            time.sleep(0)
+            if d == phi:
+                print("φ ≈ ", d)
+                break
+    time.sleep(0.001)
